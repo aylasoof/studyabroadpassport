@@ -1,0 +1,337 @@
+html {
+    /* https://cssgradient.io/ */
+    background: linear-gradient(326deg, rgba(83,128,193,1) 0%, rgba(133,165,212,1) 15%, rgba(176,197,228,1) 28%, rgba(214,225,243,1) 38%, rgba(180,200,230,1) 58%, rgba(146,175,217,1) 74%, rgba(83,128,193,1) 97%);
+}
+
+body {
+    font-family: "bc-novatica-cyr", sans-serif;
+    margin: 50px;
+}
+
+.skip a {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    background: #ffffff;
+    margin: 0;
+}
+  
+.skip a:focus {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #ffffff;
+    margin: 0;
+}
+
+h1{
+    font-family: "bc-novatica-cyr", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2{
+    font-family: "bc-novatica-cyr", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h3{
+    font-family: "bc-novatica-cyr", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h4{
+    font-family: "bc-novatica-cyr", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+}
+
+p{
+    font-family: "bc-novatica-cyr", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+}
+
+nav ul {
+    display: flex; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+    color: #4268a1;
+}
+
+header img{
+    width: 350px;
+    align-self: first baseline;
+}
+
+header ul {
+    list-style: none;
+}
+
+main{
+    margin: 10px;
+}
+
+#studyabroadintro{
+    padding: 20px 50px 50px 50px;
+}
+
+#studyabroadintro h1, #studyabroadintro p:last-of-type{
+    text-align: center;
+    padding: 0 100px;
+}
+
+footer{
+    font-family: "bc-novatica-cyr", sans-serif;
+    background-color: #376bb3;
+    padding: 20px 40px;
+    color: #ffffff;
+    text-align: center;
+}
+
+ul{
+    font-family: "bc-novatica-cyr", sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    border: solid 5px #4268a1;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li a.active {
+    background-color: #4268a1; 
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+}
+
+#citiesvisited {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(-180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.flip-card-front {
+    background-color: transparent;
+    color: black;
+}
+  
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flip-card-back h2 {
+    position: absolute; 
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.flip-card-back h3 {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.flip-card-back p {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#london, #dubai, #nice {
+    grid-column: 1 / 1;
+}
+
+#amsterdam, #kenya, #oxford {
+    grid-row: 2 / 3;
+}
+
+#brussels, #antibes, #brighton {
+    grid-row: 3 / 4;
+}
+
+#edinburgh {
+    grid-column: 1 / 1;
+    grid-row: 4 / 5;
+}
+
+#london, #amsterdam, #brussels {
+    grid-row: 1 / 2;
+}
+
+#dubai, #kenya, #antibes {
+    grid-row: 2 / 3;
+}
+
+#nice, #oxford, #brighton {
+    grid-row: 3 / 4;
+}
+
+#travelbeen img, #ustravelbeen img{
+    width: 100%;
+}
+
+/*https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp*/
+div.scroll-container {
+    background-color: #5380c1;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+  
+div.scroll-container img {
+    padding: 10px;
+    max-height: 350px;
+}
+
+/* Dropdown Button  from https://www.w3schools.com/howto/howto_css_dropdown.asp */
+.dropbtn {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    margin-left: 15px;
+    font-weight: 600;
+    color: #4268a1;
+    background-color: transparent;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    border: solid 5px #4268a1;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    left: 0;
+    top: 100%;
+}
+  
+.dropdown-content a {
+    color: #4268a1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #d7e3f5;
+    border-radius: 0;
+    color: #000000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #f1f1f1;
+    border-radius: none;
+}
+  
+.dropdown:hover .dropbtn {
+    border: solid 5px #4268a1;
+    padding: 10px;
+    text-align: center;
+}
+
+.dropdown-content a.active {
+    background-color: #4268a1; 
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 0;
+}
