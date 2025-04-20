@@ -258,6 +258,10 @@ body {
     width: 100%;
 }
 
+#travelbeen h1{
+    margin-bottom: 5px;
+}
+
 /*https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp*/
 div.scroll-container {
     background-color: #476fab;
@@ -478,23 +482,32 @@ div.scroll-container::-webkit-scrollbar {
     margin-top: 30px;
 }
 
-#amsterdamitems, #brightonitems, #bruggeitems, #brusselsitems, #dubaiitems, #edinburghitems, #londonfeb, #londonmar, #londonapr, #londonm, #londonjun, #londonjul, #niceitems, #oxforditems {
+#amsterdamitems, #brightonitems, #bruggeitems, #brusselsitems, #dubaiitems, #edinburghitems, #londonfeb, #londonmar, #londonapr, #londonm, #londonjun, #londonjul, #niceitems, #oxforditems, #nairobi {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 20px;
     justify-items: center;
 }
 
-#antibesactivities, #oxfordactivities{
+#antibesactivities, #oxfordactivities, #masaimara, #dianibeach{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 20px;
     grid-column: 1/-1;
 }
 
+#dianibeach h3, #masaimara h3, #dianibeachactivities, #masaimara p{
+    grid-column: 1/-1;
+    margin: 10px 200px 0 0;
+}
+
 #antibesactivities h2, #oxfordactivities h2, #antibesactivities ul, #oxfordactivities ul{
     grid-column: 1;
     margin: 5px;
+}
+
+#antibesactivities, #oxfordactivities, #amsterdamitems, #brightonitems,  #brusselsitems, #dubaiitems, #edinburghitems, #londonjul, #niceitems, #oxforditems, #dianibeach{
+    border-bottom: #4268a1 2px solid;
 }
 
 #favorites{
@@ -575,7 +588,7 @@ div.scroll-container::-webkit-scrollbar {
   
 #form button {
     padding: 10px 12px;
-    background-color: #007bff;
+    background-color: #055dbc;
     color: #ffffff;
     border: none;
     border-radius: 6px;
