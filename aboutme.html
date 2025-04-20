@@ -381,18 +381,19 @@
                 </section>
 
                 <!-- had to ask friend for help for JS for form -->
-                <script> 
-                  document.getElementById('questionForm').addEventListener('submit', function (e) {
-                    e.preventDefault();
-                
-                    const name = document.getElementById('name').value;
-                    const email = document.getElementById('email').value;
-                    const question = document.getElementById('question').value;
-                
-                    console.log("Question Submitted:", {name, email, question});
-                    this.reset();
-                  });
-                </script>
+                <script>
+                    document.getElementById('form').addEventListener('submit', function (e) {
+                      e.preventDefault();
+                  
+                      console.log("Question Submitted:", {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        question: document.getElementById('question').value
+                      });
+                  
+                      this.reset();
+                    });
+                  </script>                  
             </section>
     </main>
 

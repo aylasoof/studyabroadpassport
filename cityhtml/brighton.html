@@ -39,10 +39,10 @@
         <main id = "main">
             <h1 id = "citytitle">Brighton, UK</h1>
             <div class="scroll-container">
-                <img src="../cityimg1/brighton_beach.jpeg" alt="">
-                <img src="../cityimg1/brighton_fishchips.jpeg" alt="">
-                <img src="../cityimg1/brighton_pier.jpeg" alt="">
-                <img src="../cityimg1/brighton_pierside.jpeg" alt="">
+                <img src="../cityimg1/brighton_beach.jpeg" alt="A seagull flying over west side of beach">
+                <img src="../cityimg1/brighton_fishchips.jpeg" alt="Two dishes of Fish & Chips with water and salad">
+                <img src="../cityimg1/brighton_pier.jpeg" alt="Elevated pier on a dock with seagulls flying, Brighton Pier sign">
+                <img src="../cityimg1/brighton_pierside.jpeg" alt="Elevated pier on a dock with carnival rides">
               </div>
               <p>Horizontal scroll to view a few images from my trip!</p>
             <section id ="brightonitems"><section id = "brightonactivities">
@@ -58,6 +58,38 @@
                         <li>Waters Edge cafe & restaurant</li>
                     </ul>
             </section></section>
+            <section id ="travelform">
+                <h2>Want to ask questions about any of the places I visited?<br>Fill out this form!</h2>
+
+                <form action="https://formspree.io/f/xeoaypoy" method="POST" id="form">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;"><br><br>
+                    
+                    <label for="email">Your Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    
+                    <label for="question">Your Question(s):</label><br>
+                    <textarea id="question" name="question" rows="4"></textarea><br><br>
+                    
+                    <button type="submit">Send Questions</button>
+                  </form>
+                </section>
+
+                <!-- had to ask friend for help for JS for form -->
+                <script>
+                    document.getElementById('form').addEventListener('submit', function (e) {
+                      e.preventDefault();
+                  
+                      console.log("Question Submitted:", {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        question: document.getElementById('question').value
+                      });
+                  
+                      this.reset();
+                    });
+                  </script>                  
+            </section>
         </main>
         <footer>
             <p>© Copyright Web Design <span id="year"></span> by Ayla Soofi. All rights reserved.</p>

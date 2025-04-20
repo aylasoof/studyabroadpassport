@@ -39,19 +39,19 @@
         <main id = "main">
             <h1 id = "citytitle">Dubai, UAE</h1>
             <div class="scroll-container">
-                <img src="../cityimg1/dubai_beach.jpeg" alt="">
-                <img src="../cityimg1/dubai_boat.jpeg" alt="">
-                <img src="../cityimg1/dubai_burj.jpeg" alt="">
-                <img src="../cityimg1/dubai_food.jpeg" alt="">
-                <img src="../cityimg1/dubai_globalvillage.jpeg" alt="">
-                <img src="../cityimg1/dubai_kitebeach.jpeg" alt="">
+                <img src="../cityimg1/dubai_beach.jpeg" alt="Burj al Arab in background with beach and sunset">
+                <img src="../cityimg1/dubai_boat.jpeg" alt="Skyscrapers across water while on a yacht">
+                <img src="../cityimg1/dubai_burj.jpeg" alt="Illuminated fountains in front of Burj Khalifa at night">
+                <img src="../cityimg1/dubai_food.jpeg" alt="BBQ chicken, sauces, and vegetables in plates on a table">
+                <img src="../cityimg1/dubai_globalvillage.jpeg" alt="Yellow illuminated dome top building with green illuminated Statue of Liberty">
+                <img src="../cityimg1/dubai_kitebeach.jpeg" alt="Lifeguard tower with colored signs">
               </div>
               <p>Horizontal scroll to view a few images from my trip!</p>
             <section id ="dubaiitems"><section id = "dubaiactivities">
                 <h2>Activities</h2>
                     <ul>
                         <li><a href = "https://www.globalvillage.ae/en/" target="_blank">Global Village</a></li>
-                        <li><a href = " https://www.dubaiparksandresorts.com/en/motiongatetm-dubai" target="_blank">Motiongate</a></li>
+                        <li><a href = "https://www.dubaiparksandresorts.com/en/motiongatetm-dubai" target="_blank">Motiongate</a></li>
                         <li><a href = " https://www.timeout.com/time-out-market-duba" target="_blank">Timeout market</a></li>
                         <li><a href = "https://www.aquaventureworld.com/" target="_blank">The Palm Aquaventure</a></li>
                         <li><a href = "https://www.visitdubai.com/en/places-to-visit/kite-beach" target="_blank">Kite Beach</a></li>
@@ -67,6 +67,38 @@
                     <li><a href ="https://www.timeout.com/time-out-market-dubai/restaurants/pickl" target="_blank">Pickl Burgers in Timeout Market</a></li>
                 </ul>
             </section></section>
+            <section id ="travelform">
+                <h2>Want to ask questions about any of the places I visited?<br>Fill out this form!</h2>
+
+                <form action="https://formspree.io/f/xeoaypoy" method="POST" id="form">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;"><br><br>
+                    
+                    <label for="email">Your Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    
+                    <label for="question">Your Question(s):</label><br>
+                    <textarea id="question" name="question" rows="4"></textarea><br><br>
+                    
+                    <button type="submit">Send Questions</button>
+                  </form>
+                </section>
+
+                <!-- had to ask friend for help for JS for form -->
+                <script>
+                    document.getElementById('form').addEventListener('submit', function (e) {
+                      e.preventDefault();
+                  
+                      console.log("Question Submitted:", {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        question: document.getElementById('question').value
+                      });
+                  
+                      this.reset();
+                    });
+                  </script>                  
+            </section>
         </main>
         <footer>
             <p>© Copyright Web Design <span id="year"></span> by Ayla Soofi. All rights reserved.</p>

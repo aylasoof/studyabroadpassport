@@ -39,12 +39,12 @@
         <main id = "main">
             <h1 id = "citytitle">Edinburgh, Scotland</h1>
             <div class="scroll-container">
-                <img src="../cityimg1/edinburgh_arthurseat.jpeg" alt="">
-                <img src="../cityimg1/edinburgh_bag.jpeg" alt="">
-                <img src="../cityimg1/edinburgh_building.jpeg" alt="">
-                <img src="../cityimg1/edinburgh_deansvillage.jpeg" alt="">
-                <img src="../cityimg1/edinburgh_steps.jpeg" alt="">
-                <img src="../cityimg1/edinburgh_victoriast.jpeg" alt="">
+                <img src="../cityimg1/edinburgh_arthurseat.jpeg" alt="Small white stone of Arthur's Seat on top of mountain">
+                <img src="../cityimg1/edinburgh_bag.jpeg" alt="Handmade navy blue purse with pink flap and brown straps">
+                <img src="../cityimg1/edinburgh_building.jpeg" alt="Tall brown buildings around the corner of a street">
+                <img src="../cityimg1/edinburgh_deansvillage.jpeg" alt="River with sidewalk curving around with white and yellow buildings">
+                <img src="../cityimg1/edinburgh_steps.jpeg" alt="Steps going downward, showing view of Edinburgh Castle from afar">
+                <img src="../cityimg1/edinburgh_victoriast.jpeg" alt="Colorful stores on curved uphill road with brown buildings above">
               </div>
               <p>Horizontal scroll to view a few images from my trip!</p>
             <section id ="edinburghitems"><section id = "edinburghactivities">
@@ -66,6 +66,38 @@
                     <li><a href ="https://themilkman.coffee/" target="_blank">The Milkman</a></li>
                 </ul>
             </section></section>
+            <section id ="travelform">
+                <h2>Want to ask questions about any of the places I visited?<br>Fill out this form!</h2>
+
+                <form action="https://formspree.io/f/xeoaypoy" method="POST" id="form">
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;"><br><br>
+                    
+                    <label for="email">Your Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    
+                    <label for="question">Your Question(s):</label><br>
+                    <textarea id="question" name="question" rows="4"></textarea><br><br>
+                    
+                    <button type="submit">Send Questions</button>
+                  </form>
+                </section>
+
+                <!-- had to ask friend for help for JS for form -->
+                <script>
+                    document.getElementById('form').addEventListener('submit', function (e) {
+                      e.preventDefault();
+                  
+                      console.log("Question Submitted:", {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        question: document.getElementById('question').value
+                      });
+                  
+                      this.reset();
+                    });
+                  </script>                  
+            </section>
         </main>
         <footer>
             <p>© Copyright Web Design <span id="year"></span> by Ayla Soofi. All rights reserved.</p>
