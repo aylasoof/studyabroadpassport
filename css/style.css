@@ -59,11 +59,12 @@ p{
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.7px;
 }
 
 li{
     padding: 2px;
+    letter-spacing: 0.7px;
 }
 
 header{
